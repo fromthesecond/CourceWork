@@ -1,0 +1,61 @@
+
+
+.bodyy {
+	padding-top: 40px;
+    font-family: georgia;
+	font-size: 12pt;
+	
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+   	-webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+	background-image: url(../images/bc.jpeg);
+	background-attachment: fixed;
+	background-size: 100%; /* Современные браузеры */
+	background-repeat: no-repeat;
+	position: relative; 
+	margin: 0 auto; 
+	padding: 100px 0 0 0; 
+	width: 90%; 
+}
+
+.up {
+		margin-left: 850px;
+}
+.description {
+	
+	text-align: justify;
+	
+	
+}
+.divTop {
+		position: fixed; 
+		top: 0px;
+		margin: 0 ; 
+		width: 90%;	
+		margin-top:0px;	
+		margin:0 auto;
+	}
+.headerValue {
+	
+		margin: 0 ; 
+		width: 90%;
+	
+}
+
+.div {
+	
+	background-image: url(../images/topbc.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	width: 70%;
+	margin-left: 220px;
+	
+	padding-right: 20px;
+	padding-left: 80px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background-size: 100%; /* Современные браузеры */
+	
+}
