@@ -52,18 +52,17 @@
 		   			<h4 align = "right" >ID in system: ${c.id}</h4>
 		   			<h5>Created: ${c.date}</h5>
 		   			<h4 class = "h">${c.title}</h4>
-		   			<textarea class = "backarea" disabled readonly wrap = "hard" >${c.comment}</textarea>
-		   		
+		   			<p class = "backarea" >${c.comment}</p>
+		   			<p><a href = "del/${c.id}">Delete comment</a></p>
 		   </div>
 		   <p></p>
 		   </c:forEach>
 		</c:if>
 		
 		<c:if test="${comments == 'emptyList' }">
-		
 			<h5>No comments yet</h5>
-		
 		</c:if>
+		
 <div id="back-top" class = "up"><a href = "#top"><img  width="50" height="50" src = "<c:url value="/resources/images/up.png" />"/></a></div>
 
 		</div>

@@ -84,8 +84,7 @@ public class AdminController {
 	@RequestMapping(value = "/show/app/{id}", method = RequestMethod.POST)
 	public String addCommentPost(@ModelAttribute("comment") Comments comment,
             BindingResult result, @PathVariable("id") Integer id, Principal principal, Model model) {
-		
-		
+
 		Date date = new Date();
 		comment.setDate(date);
 		comment.setUser(userService.getCurrentUser(userService.getUserIdByUsername(principal.getName())));

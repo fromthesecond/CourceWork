@@ -60,7 +60,10 @@
     			
     			<p class = "h">${comment.title}</p>
     			<p align="right">Created: ${comment.date}</p>
-    			<p style = "text-align: justify;">${comment.comment}</p>
+    			<p class = "backarea">${comment.comment}</p>
+    			<c:if test = "${user == 'admin' }">
+    				<p align = "right"><a  href = "del/${comment.id}">Delete comment</a></p>
+    			</c:if>
     			<hr>
     			
     		</div>

@@ -173,5 +173,12 @@ public class AppController {
 			model.addAttribute("comments", userService.getUserComments(sessionUserId));
 		}
 		return "profile";
-	}	
+	}
+	
+	@RequestMapping(value = "/del/{id}", method = RequestMethod.GET)
+	public  String removeComment (@PathVariable("id") Integer id) {
+			
+			commentService.delComment(id);
+		return "redirect:/profile";
+	}
 }

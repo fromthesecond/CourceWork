@@ -13,11 +13,12 @@
 		padding: 5px;
 		background: #FAFFFF;
 	}
+	
 	.backarea {
-		background: #BEECF2;
-		width: 740px;
+		text-align: justify;
+		width: 100%;
 		height: 150px;
-		
+		font-size: 8pt; 
 	}
 	.h {
 		text-align: center;
