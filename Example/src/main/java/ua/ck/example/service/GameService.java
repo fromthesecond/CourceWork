@@ -4,6 +4,7 @@ import java.util.List;
 
 import ua.ck.example.domain.Comments;
 import ua.ck.example.domain.Games;
+import ua.ck.example.domain.Images;
 
 public interface GameService {
 	
@@ -13,4 +14,5 @@ public interface GameService {
 	public Games getGameById(Integer id);
 	public List <Comments> getGameComments (Integer id);
 	public Games getGame (Integer id);
+	public List <Images> getGameImages (Integer id);
 }

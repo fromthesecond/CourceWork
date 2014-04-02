@@ -73,8 +73,12 @@ public class AdminController {
 		}
 		else {
 			model.addAttribute("commentList", gameService.getGameComments(id));
-		}
 			
+		}
+		if (!gameService.getGameImages(id).isEmpty()) {
+			
+			model.addAttribute("images", gameService.getGameImages(id));
+		}
 		
 		return "app";
 	}

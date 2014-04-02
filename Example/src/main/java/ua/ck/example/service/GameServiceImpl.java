@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.ck.example.dao.GamesDAO;
 import ua.ck.example.domain.Comments;
 import ua.ck.example.domain.Games;
+import ua.ck.example.domain.Images;
 
 @Service
 public class GameServiceImpl implements GameService {
@@ -50,6 +51,12 @@ public class GameServiceImpl implements GameService {
 	public Games getGame(Integer id) {
 		
 		return gamesDAO.getGame(id);
+	}
+
+	@Transactional
+	public List<Images> getGameImages(Integer id) {
+		
+		return gamesDAO.getGameImages(id);
 	}
 	
 

@@ -8,5 +8,6 @@
 		<mapping class="ua.ck.example.domain.Games" />
 		<mapping class="ua.ck.example.domain.Users" />
 		<mapping class="ua.ck.example.domain.Comments" />
+		<mapping class="ua.ck.example.domain.Images" />
 	</session-factory>
 </hibernate-configuration>

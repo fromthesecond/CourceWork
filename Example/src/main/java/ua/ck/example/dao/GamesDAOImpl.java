@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import ua.ck.example.domain.Comments;
 import ua.ck.example.domain.Games;
+import ua.ck.example.domain.Images;
 
 @Repository
 public class GamesDAOImpl implements GamesDAO {
@@ -54,6 +55,13 @@ public class GamesDAOImpl implements GamesDAO {
 	public Games getGame(Integer id) {
 		
 		return (Games) sessionFactory.getCurrentSession().get(Games.class, id);
+	}
+
+	
+	public List<Images> getGameImages(Integer id) {
+		Games games = (Games) sessionFactory.getCurrentSession().get(Games.class, id);
+		
+		return games.getImages();
 	}
 
 }

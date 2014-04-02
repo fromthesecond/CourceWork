@@ -1,19 +1,24 @@
 package ua.ck.example.web;
 
 
+import java.io.IOException;
 import java.security.Principal;
-
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.fileupload.FileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
 import ua.ck.example.domain.Games;
 import ua.ck.example.domain.Users;
 import ua.ck.example.service.CommentService;
@@ -174,4 +179,22 @@ public class AppController {
 		}
 		return "profile";
 	}	
+	
+	@RequestMapping (value = "/upload", method = RequestMethod.POST)
+	public String upload ( @ModelAttribute("uploadForm") FileUpload upload,
+            Model map) {
+		
+
+		System.out.println(upload.getFileSizeMax());
+		return "redirect:/upload";
+	
+	}
+	@RequestMapping (value = "/upload", method = RequestMethod.GET)
+	public String uploadGet () {
+		
+		return "upload";
+	}
+	
+	
+	
 }

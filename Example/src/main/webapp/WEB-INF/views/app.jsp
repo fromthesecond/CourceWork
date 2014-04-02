@@ -17,6 +17,7 @@
 <script src="<c:url value = "/resources/js/showCommentHide.js"/>" type="text/javascript" ></script> 
 <script src="${pageContext.request.contextPath}/resources/js/up.js" type="text/javascript" ></script> 
 
+
 </head>
 <body class = "bodyy">
 
@@ -44,6 +45,10 @@
 	<div align = "center"><img class = "img" src="${byId.getUrl()}" alt="${byId.getNameGame()}" width="283" height="398"> <br> </div>
 	<div class = "description"> <p>${byId.getDescription()}</p> </div>
 	<br>
+	
+	<c:forEach items = "${images}"  var = "i">
+      <img src="${i.getUrl()}" alt="">
+	</c:forEach>
 	
 	<c:if test="${user  == 'Guest'}">
 		${user}

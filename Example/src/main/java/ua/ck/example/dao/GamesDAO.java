@@ -4,6 +4,7 @@ import java.util.List;
 
 import ua.ck.example.domain.Comments;
 import ua.ck.example.domain.Games;
+import ua.ck.example.domain.Images;
 
 public interface GamesDAO {
 
@@ -18,4 +19,6 @@ public interface GamesDAO {
 	public List <Comments> getGameComments (Integer id);
 	
 	public Games getGame (Integer id);
+	
+	public List <Images> getGameImages (Integer id);
 }

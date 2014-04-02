@@ -10,4 +10,6 @@
 	<!-- Определяем папку, в которой будем искать веб компоненты (контроллеры)-->
 	<context:component-scan base-package="ua.ck.example.web" />
 	<mvc:annotation-driven />
+	
+	
 </beans>

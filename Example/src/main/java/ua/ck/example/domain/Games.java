@@ -30,6 +30,15 @@ public class Games {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "game")
 	private List <Comments> comments = new ArrayList<Comments>();
 	
+	@OneToMany (fetch = FetchType.LAZY, mappedBy = "game")
+	private List <Images> images = new ArrayList <Images>();
+	
+	public List<Images> getImages() {
+		return images;
+	}
+	public void setImages(List<Images> images) {
+		this.images = images;
+	}
 	public List<Comments> getComments() {
 		return comments;
 	}
