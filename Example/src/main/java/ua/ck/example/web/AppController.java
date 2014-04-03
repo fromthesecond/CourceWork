@@ -177,24 +177,27 @@ public class AppController {
 		else {
 			model.addAttribute("comments", userService.getUserComments(sessionUserId));
 		}
+		
+		if (!userService.getUserOrders(sessionUserId).isEmpty()) {
+			
+			model.addAttribute("orders", userService.getUserOrders(sessionUserId));
+			model.addAttribute("details", "");
+		}
+		
 		return "profile";
-	}	
+	}		
 	
-	@RequestMapping (value = "/upload", method = RequestMethod.POST)
-	public String upload ( @ModelAttribute("uploadForm") FileUpload upload,
-            Model map) {
+	@RequestMapping(value = "/deleteComment/{id}", method = RequestMethod.GET)
+	public  String deleteComment (@PathVariable("id") Integer id) {
 		
-
-		System.out.println(upload.getFileSizeMax());
-		return "redirect:/upload";
-	
-	}
-	@RequestMapping (value = "/upload", method = RequestMethod.GET)
-	public String uploadGet () {
-		
-		return "upload";
+		commentService.delComment(id);
+		return "redirect:/profile";
 	}
 	
-	
-	
+	@RequestMapping(value = "/deleteCommentAsAdmin/{id}", method = RequestMethod.GET)
+	public  String deleteCommentAsAdmin (@PathVariable("id") Integer id) {
+		
+		commentService.delComment(id);
+		return "redirect:/admin";
+	}
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import ua.ck.example.domain.Comments;
+import ua.ck.example.domain.Orders;
 import ua.ck.example.domain.Users;
 
 @Repository
@@ -81,5 +82,11 @@ public class UsersDAOImpl implements UsersDAO{
 	public Users getCurrentUser(Integer id) {
 		
 		return (Users) sessionFactory.getCurrentSession().get(Users.class, id);
+	}
+
+	public List<Orders> getUserOrders(Integer id) {
+		
+		Users user = (Users) sessionFactory.getCurrentSession().get(Users.class, id);
+		return user.getUserOrder();
 	}
 }

@@ -9,5 +9,6 @@
 		<mapping class="ua.ck.example.domain.Users" />
 		<mapping class="ua.ck.example.domain.Comments" />
 		<mapping class="ua.ck.example.domain.Images" />
+		<mapping class="ua.ck.example.domain.Orders" />
 	</session-factory>
 </hibernate-configuration>

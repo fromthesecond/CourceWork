@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ua.ck.example.dao.UsersDAO;
 import ua.ck.example.domain.Comments;
+import ua.ck.example.domain.Orders;
 import ua.ck.example.domain.Users;
 
 @Service
@@ -65,6 +66,12 @@ public class UserServiceImpl implements UserService {
 	public Users getCurrentUser(Integer id) {
 		
 		return userDAO.getCurrentUser(id);
+	}
+
+	@Transactional 
+	public List<Orders> getUserOrders(Integer id) {
+		
+		return userDAO.getUserOrders(id);
 	}
 	
 }

@@ -33,6 +33,15 @@ public class Games {
 	@OneToMany (fetch = FetchType.LAZY, mappedBy = "game")
 	private List <Images> images = new ArrayList <Images>();
 	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "game")
+	private List <Orders> gameOrder = new ArrayList <Orders>();
+	
+	public List<Orders> getGameOrder() {
+		return gameOrder;
+	}
+	public void setGameOrder(List<Orders> gameOrder) {
+		this.gameOrder = gameOrder;
+	}
 	public List<Images> getImages() {
 		return images;
 	}

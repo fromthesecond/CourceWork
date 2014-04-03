@@ -14,8 +14,10 @@
    <intercept-url pattern="/home" access="ROLE_ADMIN, ROLE_USER"/> 
    <intercept-url pattern="/addUser/**" access="ROLE_ADMIN"/>
    <intercept-url pattern="/admin/setRoleUser/**" access="ROLE_ADMIN"/>
-    <intercept-url pattern="/admin/setRoleAdmin/**" access="ROLE_ADMIN"/>
+   <intercept-url pattern="/admin/setRoleAdmin/**" access="ROLE_ADMIN"/>
    <intercept-url pattern="/profile/**" access="ROLE_USER"/>
+   <intercept-url pattern="/deleteComment/**" access="ROLE_USER"/>
+   <intercept-url pattern="/deleteCommentAsAdmin/**" access="ROLE_ADMIN"/>
    <intercept-url pattern="/app" access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN"/>
    <intercept-url pattern="/about" access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN"/>
    <intercept-url pattern="/contact" access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN"/>

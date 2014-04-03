@@ -12,8 +12,7 @@
 <title>HTTP Status 403 - Access is denied</title>
 </head>
 <body>
-	<h2>HTTP Status 403 - Access is denied</h2>
-	<p><img src="http://www.truechristianjewelry.com/product_images/uploaded_images/oops.png" width="300" height="300" alt="error"></p>	
-	<p>... but you can <a href = "<c:url value="/"/>"> go to main page </a></p>
+	<h2 align = "center">HTTP Status 403 - Access is denied</h2>
+	<p>Please, <a href = "<c:url value="/"/>"> go to main page </a></p>
 </body>
 </html>

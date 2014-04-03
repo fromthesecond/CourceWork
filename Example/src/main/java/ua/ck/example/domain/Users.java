@@ -27,6 +27,17 @@ public class Users {
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 	List <Comments> comments = new ArrayList<Comments>();
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+	List <Orders> userOrder = new ArrayList<Orders>();
+	
+	public List<Orders> getUserOrder() {
+		return userOrder;
+	}
+	
+	public void setUserOrder(List<Orders> userOrder) {
+		this.userOrder = userOrder;
+	}
 
 	public int getId() {
 		return id;

@@ -3,6 +3,7 @@ package ua.ck.example.service;
 import java.util.List;
 
 import ua.ck.example.domain.Comments;
+import ua.ck.example.domain.Orders;
 import ua.ck.example.domain.Users;
 
 public interface UserService {
@@ -16,4 +17,5 @@ public interface UserService {
 	public List <Comments> getUserComments(Integer id);
 	public Integer getUserIdByUsername(String username);
 	public Users getCurrentUser (Integer id);
+	public List <Orders> getUserOrders (Integer id);
 }

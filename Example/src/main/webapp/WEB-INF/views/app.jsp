@@ -64,8 +64,12 @@
     		<div class = "divBorder">
     			<p class = "author">Author: ${comment.getUserName()}</p>	
     			<p class = "h">${comment.title}</p>
-    			<p align="right">Created: ${comment.date}}</p>
+    			<p align="right">Created: ${comment.date}</p>
     			<p style = "text-align: justify;">${comment.comment}</p>
+    				<c:if test = "${user == 'admin'}">
+    					<a href = "<c:url value="/deleteCommentAsAdmin/${comment.getId()}" /> " >Delete comment</a>
+    				</c:if>
+    			
     			<hr>
     		</div>
     		<p></p>
