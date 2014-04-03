@@ -8,5 +8,4 @@ public interface CommentsDAO {
 	public Comments commentById(Integer id);
 	public void delComment(Integer id);
 	public void addComment(Comments comment);
-	
 }

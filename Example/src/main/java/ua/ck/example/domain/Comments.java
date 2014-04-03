@@ -32,6 +32,11 @@ public class Comments {
 	@JoinColumn(name = "idGame")
 	private Games game;
 	
+	public String getUserName () {
+		
+		return user.getUsername();
+	}
+	
 	public int getId() {
 		return id;
 	}

@@ -59,19 +59,18 @@
 		<a href="#" id="showHideContent">Show/Hide User Comments</a>
   		<div id="content" style="display:none;">
   		
-  		<c:if test="${comment != 'emptyList' }">
-    		<c:forEach items="${commentList}" var="comment">
+  	<c:if test="${comment != 'emptyList' }">
+    	<c:forEach items="${commentList}" var="comment">
     		<div class = "divBorder">
-    			
+    			<p class = "author">Author: ${comment.getUserName()}</p>	
     			<p class = "h">${comment.title}</p>
-    			<p align="right">Created: ${comment.date}</p>
+    			<p align="right">Created: ${comment.date}}</p>
     			<p style = "text-align: justify;">${comment.comment}</p>
     			<hr>
-    			
     		</div>
     		<p></p>
-    		</c:forEach>	
-		</c:if>
+    	</c:forEach>	
+	</c:if>
 		
 		<c:if test="${comment == 'emptyList'}">
 			<h5>No comments yet</h5>

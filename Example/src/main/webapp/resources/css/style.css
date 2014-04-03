@@ -17,8 +17,18 @@
 		background: #BEECF2;
 		width: 740px;
 		height: 150px;
-		
+		font-size: 100%;
 	}
+	
+	.author {
+		color: rgb(49, 151, 116);
+		text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+
+	}
+	
+	
 	.h {
 		text-align: center;
 		text-shadow:  #6C7C7F 30px 20px 3px;
