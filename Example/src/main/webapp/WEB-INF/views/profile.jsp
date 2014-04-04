@@ -48,7 +48,7 @@
 				<div class = "divBorder">
 					<p>Name of the item: ${o.getOrderGame()}</p>
 					<p>Customer: ${o.getOrderUser()}</p>
-					<p>Price of single order: ${o.price} USD</p>
+					<p>Price of single order: ${o.getPriceOrder()} USD</p>
 					<p>Purchase date: ${o.date}</p>
 					<a href = "<c:url value="/delOrder/${o.id}"/>">Cancel order</a>
 				</div>

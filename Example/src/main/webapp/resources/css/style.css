@@ -12,12 +12,22 @@
 		border-width: thin;
 		padding: 5px;
 		background: #FAFFFF;
+		
+		line-height: 30px;
+		margin: 30px auto;
+		padding: 0 5px;
+		background:#222;
+		color:#fff;
+		border: 1px solid #fff;
+		-moz-box-shadow: 0 0 20px #555; 
+		-webkit-box-shadow: 0 0 20px #555;
+		box-shadow: 0 0 20px #555;"
 	}
 	.backarea {
-		background: #BEECF2;
 		width: 740px;
 		height: 150px;
 		font-size: 100%;
+				
 	}
 	
 	.author {
@@ -28,6 +38,8 @@
 
 	}
 	
+	.price {
+		-moz-text-shadow:0 0 10px #c00; -webkit-text-shadow:0 0 10px #c00; text-shadow:0 0 10px #c00;	}
 	
 	.h {
 		text-align: center;

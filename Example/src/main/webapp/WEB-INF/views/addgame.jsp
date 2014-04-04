@@ -32,13 +32,14 @@
           
  </ul>
       
-	 <form:form method="post" modelAttribute="game" class = "formCenter" enctype="multipart/form-data" action = "/upload">
-				
+	 <form:form method="post" modelAttribute="game" class = "formCenter">
+
 	 	<form:input path="nameGame" class="form-control" placeholder="Title" />
 	 	<form:textarea path = "description" class = "form-control" type = "text" placeholder="Description" rows = "10" />
 	 	<form:input path = "url" class = "form-control" type = "text" placeholder = "URL Image"/>
+	 	<form:input path = "price" class = "form-control" type = "number" min="0.1" max = "100" value = "1" step="0.1"  placeholder = "Set price"/>
 	 	<input type="submit" value="Add Game" class="btn btn-lg btn-primary btn-block"/>
-	 	
+
 	 </form:form> 
 		
 	

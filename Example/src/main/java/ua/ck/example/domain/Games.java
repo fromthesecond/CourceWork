@@ -27,6 +27,8 @@ public class Games {
 	@Column(name = "URL")
 	private String url;
 	
+	private double price;
+	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "game")
 	private List <Comments> comments = new ArrayList<Comments>();
 	
@@ -78,5 +80,10 @@ public class Games {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
 }

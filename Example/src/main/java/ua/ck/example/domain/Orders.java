@@ -21,7 +21,7 @@ public class Orders {
 	@Column(name = "id")
 	@GeneratedValue
 	private int id;
-	private double price;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date;
 	
@@ -44,20 +44,17 @@ public class Orders {
 		return user.getUsername();
 	}
 	
+	public double getPriceOrder () {
+		
+		return game.getPrice();
+	}
+	
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
 	}
 
 	public Date getDate() {

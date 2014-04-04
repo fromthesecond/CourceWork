@@ -42,7 +42,7 @@
 <div class = "div">
 	<a href = "<c:url value="/show" /> ">Back to list</a>
 	<h3>${byId.getNameGame()}</h3>
-	<div align = "center"><img class = "img" src="${byId.getUrl()}" alt="${byId.getNameGame()}" width="283" height="398"> <br> </div>
+	<div align = "center"><img class = "img" src="${byId.getUrl()}" style="-moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; box-shadow:0 0 10px #000;" alt="${byId.getNameGame()}" width="283" height="398"> <br> </div>
 	
 	<c:choose>
 		<c:when test="${name == 'Guest'}">
@@ -53,7 +53,8 @@
 			Youre admin, you cant buy items <p></p>
 		</c:when>
 		<c:otherwise>
-			<p><a href = "<c:url value="/createOrder/${byId.id}" />"><img height = "50" width = "100" src = "<c:url value = "/resources/images/buy.png"/>" /></a></p>
+			<p class = "price"><a href = "<c:url value="/createOrder/${byId.id}" />"><img height = "50" width = "100" src = "<c:url value = "/resources/images/buy.png"/>" /></a>
+			${byId.getPrice()} USD</p>
 		</c:otherwise>
 	</c:choose>
 	

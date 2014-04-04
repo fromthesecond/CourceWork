@@ -217,7 +217,6 @@ public class AppController {
 		Date date = new Date();
 		
 		orders.setDate(date);
-		orders.setPrice(19.99);
 		orders.setUser(userService.getCurrentUser(sessionUserId));
 		orders.setGame(gameService.getGame(id));
 		
