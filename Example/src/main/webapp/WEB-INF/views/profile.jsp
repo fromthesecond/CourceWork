@@ -41,14 +41,16 @@
 		<h5 align = "right">Identificator : ${userInfo.getId()}</h5>
 		
 		<h3>${userInfo.getUsername()} orders</h3>
-			<div class = "divBorder">
+			
 				<c:forEach items = "${orders}" var = "o">
+				<div class = "divBorder">
 					<p>Name of the item: ${o.getOrderGame()}</p>
 					<p>Customer: ${o.getOrderUser()}</p>
 					<p>Price of single order: ${o.price} USD</p>
 					<p>Purchase date: ${o.date}</p>
+				</div>
 				</c:forEach>
-			</div>
+			
 		
 		<br>
 		<a href="#" id="showHideContent">Show/Hide comments</a>

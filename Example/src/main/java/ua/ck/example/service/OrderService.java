@@ -7,4 +7,6 @@ import ua.ck.example.domain.Orders;
 public interface OrderService {
 	
 	public List <Orders> getAllOrders();
+	public void addOrder (Orders orders);
+	
 }

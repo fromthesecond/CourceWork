@@ -43,6 +43,22 @@
 	<a href = "<c:url value="/show" /> ">Back to list</a>
 	<h3>${byId.getNameGame()}</h3>
 	<div align = "center"><img class = "img" src="${byId.getUrl()}" alt="${byId.getNameGame()}" width="283" height="398"> <br> </div>
+	
+	<c:choose>
+		<c:when test="${name == 'Guest'}">
+			<p>Register to buy this game</p>
+		</c:when>
+		
+		<c:when test="${user == 'admin'}">
+			Youre admin, you cant buy items <p></p>
+		</c:when>
+		<c:otherwise>
+			<p><a href = "<c:url value="/createOrder/${byId.id}" />"><img height = "50" width = "100" src = "<c:url value = "/resources/images/buy.png"/>" /></a></p>
+		</c:otherwise>
+	</c:choose>
+	
+	
+	
 	<div class = "description"> <p>${byId.getDescription()}</p> </div>
 	<br>
 	
@@ -53,9 +69,9 @@
 	<c:if test="${user  == 'Guest'}">
 		${user}
 	</c:if>
-
 	
-		
+	
+	
 		<a href="#" id="showHideContent">Show/Hide User Comments</a>
   		<div id="content" style="display:none;">
   		

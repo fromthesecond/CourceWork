@@ -3,6 +3,7 @@ package ua.ck.example.web;
 
 import java.io.IOException;
 import java.security.Principal;
+import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -20,9 +21,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import ua.ck.example.domain.Games;
+import ua.ck.example.domain.Orders;
 import ua.ck.example.domain.Users;
 import ua.ck.example.service.CommentService;
 import ua.ck.example.service.GameService;
+import ua.ck.example.service.OrderService;
 import ua.ck.example.service.UserService;
 
 @Controller
@@ -36,6 +39,10 @@ public class AppController {
 	
 	@Autowired
 	private CommentService commentService;
+	
+	@Autowired
+	private OrderService orderService;
+	
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String hello() {
@@ -199,5 +206,22 @@ public class AppController {
 		
 		commentService.delComment(id);
 		return "redirect:/admin";
+	}
+	
+	@RequestMapping(value = "/createOrder/{id}", method = RequestMethod.GET)
+	public String createOrder (@PathVariable ("id") Integer id, Principal principal) {
+		
+		int sessionUserId = userService.getUserIdByUsername(principal.getName());
+		
+		Orders orders = new Orders();
+		Date date = new Date();
+		
+		orders.setDate(date);
+		orders.setPrice(19.99);
+		orders.setUser(userService.getCurrentUser(sessionUserId));
+		orders.setGame(gameService.getGame(id));
+		
+		orderService.addOrder(orders);
+		return "redirect:/profile";
 	}
 }

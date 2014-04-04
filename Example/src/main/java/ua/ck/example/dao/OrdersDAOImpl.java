@@ -21,4 +21,10 @@ public class OrdersDAOImpl implements OrdersDAO {
 	            .list();
 	}
 
+
+	public void addOrder(Orders orders) {
+		
+		sessionFactory.getCurrentSession().save(orders);
+	}
+
 }

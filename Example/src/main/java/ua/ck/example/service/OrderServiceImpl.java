@@ -10,7 +10,7 @@ import ua.ck.example.dao.OrdersDAO;
 import ua.ck.example.domain.Orders;
 
 @Service
-public class OrderServiceImpl implements OrdersDAO {
+public class OrderServiceImpl implements OrderService {
 	
 	@Autowired
 	private OrdersDAO ordersDAO;
@@ -19,5 +19,11 @@ public class OrderServiceImpl implements OrdersDAO {
 	public List<Orders> getAllOrders() {
 		
 		return ordersDAO.getAllOrders();
+	}
+
+	@Transactional
+	public void addOrder(Orders orders) {
+		
+		ordersDAO.addOrder(orders);
 	}
 }
