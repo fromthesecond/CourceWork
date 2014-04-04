@@ -18,6 +18,39 @@
 <script src="${pageContext.request.contextPath}/resources/js/up.js" type="text/javascript" ></script> 
 
 
+<script src="${pageContext.request.contextPath}/resources/js/jquery-1.10.1.min.js" type="text/javascript" ></script> 
+<script src="${pageContext.request.contextPath}/resources/js/jquery.fancybox.js" type="text/javascript" ></script> 
+<link href="${pageContext.request.contextPath}/resources/css/jquery.fancybox.css" rel="stylesheet" > 
+
+
+<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('.fancybox').fancybox();
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+		});
+	</script>
+	
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+	</style>
+
 </head>
 <body class = "bodyy">
 
@@ -44,6 +77,13 @@
 	<h3>${byId.getNameGame()}</h3>
 	<div align = "center"><img class = "img" src="${byId.getUrl()}" style="-moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; box-shadow:0 0 10px #000;" alt="${byId.getNameGame()}" width="283" height="398"> <br> </div>
 	
+	
+	<c:forEach items = "${images}"  var = "i" begin = "0" end = "4">
+ <a class="fancybox-effects-d" href="${i.getUrl()}" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"><img src="${i.getUrl()}" width = "150px" height = "150px"  alt="" /></a>
+	</c:forEach>
+<p></p>
+	
+	
 	<c:choose>
 		<c:when test="${name == 'Guest'}">
 			<p>Register to buy this game</p>
@@ -60,11 +100,13 @@
 	
 	<div class = "description"> <p>${byId.getDescription()}</p> </div>
 	<br>
+
+
+
 	
-	<c:forEach items = "${images}"  var = "i">
-      <img src="${i.getUrl()}" alt="">
-	</c:forEach>
-	
+
+
+
 	<c:if test="${user  == 'Guest'}">
 		${user}
 	</c:if>
@@ -92,6 +134,12 @@
 			<h5>No comments yet</h5>
 		</c:if>
     	</div>
+	
+	
+	
+	
+	
+	
 		
 	<c:if test="${name != 'Guest' }">
 		

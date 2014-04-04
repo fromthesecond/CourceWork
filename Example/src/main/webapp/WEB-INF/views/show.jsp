@@ -61,10 +61,10 @@
           
      </ul>
      </c:if>
-        <div class = "div"> 
+        <div class = "div" > 
         <c:forEach items="${listGames}" var="games"> 
-			<h3>${games.getNameGame()} <small><a href="<c:url value="/show/app/${games.getId()}" /> ">${games.getNameGame()}</a></small></h3>
-			<img class = "img" src="${games.getUrl()}" style="-moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; box-shadow:0 0 10px #000;" alt="${games.getNameGame()}" width="283" height="398"> 
+			<center><h3>${games.getNameGame()} <small><a href="<c:url value="/show/app/${games.getId()}" /> ">${games.getNameGame()}</a></small></h3></center>
+			<center><img class = "img" src="${games.getUrl()}" style="-moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; box-shadow:0 0 10px #000;" alt="${games.getNameGame()}" width="283" height="398"></center> 
 			<c:if test="${name == 'admin'}">
 				<p> <a href = "delete/${games.id}"> Delete Game</a> </p>
 			</c:if>
