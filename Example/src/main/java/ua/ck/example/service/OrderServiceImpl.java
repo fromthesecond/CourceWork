@@ -26,4 +26,10 @@ public class OrderServiceImpl implements OrderService {
 		
 		ordersDAO.addOrder(orders);
 	}
+
+	@Transactional
+	public void deleteOrder(Integer id) {
+		
+		ordersDAO.deleteOrder(id);
+	}
 }

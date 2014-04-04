@@ -40,6 +40,8 @@
 		<h4 align = "right">${userInfo.getEmail()}</h4>
 		<h5 align = "right">Identificator : ${userInfo.getId()}</h5>
 		
+		
+		<c:if test="${ not empty orders}">
 		<h3>${userInfo.getUsername()} orders</h3>
 			
 				<c:forEach items = "${orders}" var = "o">
@@ -48,9 +50,10 @@
 					<p>Customer: ${o.getOrderUser()}</p>
 					<p>Price of single order: ${o.price} USD</p>
 					<p>Purchase date: ${o.date}</p>
+					<a href = "<c:url value="/delOrder/${o.id}"/>">Cancel order</a>
 				</div>
 				</c:forEach>
-			
+		</c:if>	
 		
 		<br>
 		<a href="#" id="showHideContent">Show/Hide comments</a>

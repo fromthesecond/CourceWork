@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import ua.ck.example.domain.Games;
 import ua.ck.example.domain.Orders;
 
 @Repository
@@ -25,6 +26,16 @@ public class OrdersDAOImpl implements OrdersDAO {
 	public void addOrder(Orders orders) {
 		
 		sessionFactory.getCurrentSession().save(orders);
+	}
+
+	public void deleteOrder(Integer id) {
+		
+		Orders order = (Orders) sessionFactory.getCurrentSession().load(
+				Orders.class, id);
+		
+		if (null != order) {
+			sessionFactory.getCurrentSession().delete(order);
+		}
 	}
 
 }

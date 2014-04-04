@@ -8,5 +8,6 @@ public interface OrderService {
 	
 	public List <Orders> getAllOrders();
 	public void addOrder (Orders orders);
+	public void deleteOrder (Integer id);
 	
 }

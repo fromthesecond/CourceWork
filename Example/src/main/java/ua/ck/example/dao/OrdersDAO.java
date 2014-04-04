@@ -8,4 +8,5 @@ public interface OrdersDAO {
 	
 	public List <Orders> getAllOrders();
 	public void addOrder (Orders orders);
+	public void deleteOrder (Integer id);
 }

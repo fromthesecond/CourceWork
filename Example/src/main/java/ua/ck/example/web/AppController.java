@@ -224,4 +224,11 @@ public class AppController {
 		orderService.addOrder(orders);
 		return "redirect:/profile";
 	}
+	
+	@RequestMapping(value = "/delOrder/{id}", method = RequestMethod.GET)
+	public  String deleteOrder (@PathVariable("id") Integer id) {
+		
+		orderService.deleteOrder(id);
+		return "redirect:/profile";
+	}
 }

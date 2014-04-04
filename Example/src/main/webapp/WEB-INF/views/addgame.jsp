@@ -32,30 +32,15 @@
           
  </ul>
       
-	 <%-- <form:form method="post" modelAttribute="game" class = "formCenter" enctype="multipart/form-data" action = "/upload">
+	 <form:form method="post" modelAttribute="game" class = "formCenter" enctype="multipart/form-data" action = "/upload">
 				
 	 	<form:input path="nameGame" class="form-control" placeholder="Title" />
 	 	<form:textarea path = "description" class = "form-control" type = "text" placeholder="Description" rows = "10" />
 	 	<form:input path = "url" class = "form-control" type = "text" placeholder = "URL Image"/>
 	 	<input type="submit" value="Add Game" class="btn btn-lg btn-primary btn-block"/>
 	 	
-	 </form:form> --%>
+	 </form:form> 
 		
-		<form:form method="post" action="upload" modelAttribute="uploadForm" enctype="multipart/form-data">
- 
-    <p>Select files to upload. Press Add button to add more file inputs.</p>
- 
-    <input id="addFile" type="button" value="Add File" />
-    <table id="fileTable">
-        <tr>
-            <td><input name="files[0]" type="file" /></td>
-        </tr>
-        <tr>
-            <td><input name="files[1]" type="file" /></td>
-        </tr>
-    </table>
-    <br/><input type="submit" value="Upload" />
-	</form:form>
 	
 </body>
 </html>

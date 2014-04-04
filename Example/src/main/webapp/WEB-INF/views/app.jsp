@@ -57,8 +57,6 @@
 		</c:otherwise>
 	</c:choose>
 	
-	
-	
 	<div class = "description"> <p>${byId.getDescription()}</p> </div>
 	<br>
 	
@@ -69,8 +67,6 @@
 	<c:if test="${user  == 'Guest'}">
 		${user}
 	</c:if>
-	
-	
 	
 		<a href="#" id="showHideContent">Show/Hide User Comments</a>
   		<div id="content" style="display:none;">
@@ -85,7 +81,6 @@
     				<c:if test = "${user == 'admin'}">
     					<a href = "<c:url value="/deleteCommentAsAdmin/${comment.getId()}" /> " >Delete comment</a>
     				</c:if>
-    			
     			<hr>
     		</div>
     		<p></p>
