@@ -77,12 +77,14 @@
 	<h3>${byId.getNameGame()}</h3>
 	<div align = "center"><img class = "img" src="${byId.getUrl()}" style="-moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; box-shadow:0 0 10px #000;" alt="${byId.getNameGame()}" width="283" height="398"> <br> </div>
 	
-	
+	<br>
+<div class = "lib"> 
 	<c:forEach items = "${images}"  var = "i" begin = "0" end = "4">
- <a class="fancybox-effects-d" href="${i.getUrl()}" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"><img src="${i.getUrl()}" width = "150px" height = "150px"  alt="" /></a>
-	</c:forEach>
-<p></p>
 	
+ <a class="fancybox-effects-d" href="${i.getUrl()}" title="${byId.getNameGame()}"><img src="${i.getUrl()}" width = "130px" height = "150px"  alt="" /></a>
+	</c:forEach>
+	<p></p>
+</div>	
 	
 	<c:choose>
 		<c:when test="${name == 'Guest'}">
@@ -100,10 +102,6 @@
 	
 	<div class = "description"> <p>${byId.getDescription()}</p> </div>
 	<br>
-
-
-
-	
 
 
 

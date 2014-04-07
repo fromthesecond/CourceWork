@@ -5,6 +5,16 @@
 	text-indent: 10px;
 	}
 	
+	.lib {
+		
+	-webkit-box-shadow: -42px 39px 51px 0px rgba(163,191,201,1);
+	-moz-box-shadow: -42px 39px 51px 0px rgba(163,191,201,1);
+	box-shadow: -42px 39px 51px 0px rgba(163,191,201,1);
+	border-radius: 110px 32px 172px 175px;
+	
+	width: 610px;
+	background:-webkit-gradient(linear, 85% 99%, 2% 76%, from(#00ECFF), to(#00FF58))
+	}
 	.divBorder {
 		border: 2px;
 		border-style: ridge;

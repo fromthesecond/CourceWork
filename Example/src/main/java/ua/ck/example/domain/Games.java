@@ -11,6 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 @Entity
 @Table(name = "Games")
 public class Games {
@@ -30,12 +33,15 @@ public class Games {
 	private double price;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "game")
+	@Cascade({CascadeType.ALL})
 	private List <Comments> comments = new ArrayList<Comments>();
 	
 	@OneToMany (fetch = FetchType.LAZY, mappedBy = "game")
+	@Cascade({CascadeType.ALL})
 	private List <Images> images = new ArrayList <Images>();
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "game")
+	@Cascade({CascadeType.ALL})
 	private List <Orders> gameOrder = new ArrayList <Orders>();
 	
 	public List<Orders> getGameOrder() {
