@@ -27,9 +27,9 @@
         <h3 class="text-muted">Liberty Games</h3>
         <ul class="nav nav-justified">
           <li class = "active"><a href="<c:url value="/"/>">Home</a></li>
-          <li><a href="#">Popular</a></li>
+          <li><a href="<c:url value="/show"/>">Popular</a></li>
           <li><a href="<c:url value="/show"/>">Games Library</a></li>
-          <li><a href="#">Demos</a></li>
+          <li><a href="<c:url value="/show"/>">Demos</a></li>
           <li><a href="<c:url value="/about"/>">About</a></li>
           <li><a href="<c:url value="/contactUs"/>">Contact</a></li>
         </ul>
@@ -52,17 +52,17 @@
         <div class="col-lg-4">
           <h2>Advantages</h2>
           <p>Out team provides for all players amazing prices to hotest games from leading developers. All novelties have best compatibility.</p>
-          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+          <p><a class="btn btn-primary" href="<c:url value="/about" />">View details &raquo;</a></p>
         </div>
         <div class="col-lg-4">
           <h2>Security</h2>
           <p>We carry out dangerous operations with money and completely subordinate to the legislation. Is conducted full accountability to the government.</p>
-          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+          <p><a class="btn btn-primary" href="<c:url value="/about" />">View details &raquo;</a></p>
        </div>
         <div class="col-lg-4">
           <h2>Feedback</h2>
           <p>We are working since 2013 and have a lot of positive feedback, which confirms the high quality of services provided for the sale of digital content.</p>
-          <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+          <p><a class="btn btn-primary" href="<c:url value="/about" />">View details &raquo;</a></p>
         </div>
       </div>
 

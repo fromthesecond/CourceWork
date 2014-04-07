@@ -26,10 +26,10 @@
         <ul class="nav nav-justified menu">
           <li><a href="<c:url value="/" /> ">Home</a></li>
           <li><a href="<c:url value="#" />">Popular</a></li>
-          <li class="active"><a href="<c:url value="/show"/>">Games Library</a></li>
+          <li><a href="<c:url value="/show"/>">Games Library</a></li>
           <li><a href="#">Demos</a></li>
           <li><a href="<c:url value="/about"/>">About</a></li>
-          <li><a href="<c:url value="/contactUs"/>">Contact</a></li>
+          <li class="active"><a href="<c:url value="/contactUs"/>">Contact</a></li>
           <c:if test = "${name != 'Guest'}">
           		<li><a href="<c:url value="/j_spring_security_logout" /> ">Logout</a></li>
           </c:if>
@@ -39,7 +39,8 @@
       </div>
 	
 	<div class = "div"> 
-		<h1>Мабсмьд</h1>
+		<h1 align = "center">Contact Us</h1>
+			<p>You can ask as about anything to send email fromthesecond@gmail.com</p>
 		
 	</div>
 </body>
